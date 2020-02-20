@@ -52,6 +52,7 @@
   transition: 0.5s;
   p {
     margin: 0;
+    margin-left: $spacer /2;
   }
   i {
     margin-right: $spacer;
@@ -88,4 +89,8 @@
   &:hover {
     box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
   }
+}
+
+#dose_ingredient_id {
+margin-left: $spacer *2;
 }
