@@ -2,7 +2,12 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(34, 168, 170, 0.7);
+  background-color: transparent;
+  transition: 0.2s background-color ease;
+}
+
+.navbar-lewagon-color {
+  background: rgba(34, 168, 170, 0.85);
   border-bottom: 1px solid rgba(55,55,55, 0.5);
   box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);
 }
@@ -35,12 +40,12 @@
 .nav-link {
   font-size: 24px;
   transition: 0.5s;
-  border: 1px solid rgba(55,55,55, 0.5);
   border-radius: $spacer;
-  & i:hover{
-    // color: white;
+  i{
+    color: white;
   }
+
   &:hover {
-    text-shadow: 2px 1px 0px rgba(255,255,255, 0.7);
+    text-shadow: 2px 1px 0px rgba(0,0,0, 0.91);
   }
 }
