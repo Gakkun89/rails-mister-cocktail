@@ -1,1 +1,18 @@
-<h1>show test</h1>
+<div class="cocktail-container">
+  <div class="cocktail-image"></div>
+  <div class="cocktail-info">
+    <h2><%= @cocktail.name %></h2>
+    <ul class="cocktail-ingredients">
+      <% @cocktail.doses.each do |dose| %>
+      <div class="cocktail-ingredient">
+        <li><%= dose.ingredient.name %> | <%= dose.description %></li>
+        <%= link_to dose_path(dose) do  %>
+          <i class="fas fa-minus-circle"></i>
+        <% end %>
+      </div>
+      <% end %>
+    </ul>
+    <%= link_to "Add new ingredient", new_cocktail_dose_path(@cocktail)  %>
+  </div>
+
+</div>
