@@ -49,3 +49,10 @@
     text-shadow: 2px 1px 0px rgba(0,0,0, 0.91);
   }
 }
+
+.dropdown-menu{
+  padding: $spacer;
+  background: rgba(34, 168, 170, 0.85);
+  color: white;
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.7);
+}

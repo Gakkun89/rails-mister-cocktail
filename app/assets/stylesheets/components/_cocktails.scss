@@ -12,6 +12,9 @@
   li {
     list-style-type: none;
   }
+  a:hover {
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.75);
+  }
 }
 
 .cocktail-add-dose {
@@ -20,6 +23,7 @@
   margin-top: $spacer;
   // padding-right: 0;
   width: 170px;
+  transition: 0.5s;
   p {
     margin: 0;
   }
@@ -29,13 +33,13 @@
 }
 .cocktail-container {
   padding: $spacer * 2;
-  border-radius: $spacer;
-  background-color: rgba(200, 200, 200, 0.6);
+  background-color: rgb(235,235,235);
   margin: $spacer * 2 auto;
+  margin-top: $spacer * 5;
   width: 500px;
   display: flex;
   border: 1px solid rgba(55,55,55, 0.3);
-  box-shadow: 1px 1px 4px rgba(55,55,55, 0.3);
+  transition: 0.5s;
 }
 
 .cocktail-image {
@@ -45,8 +49,15 @@
   width: 150px;
   border-radius: $spacer;
   margin-right: $spacer;
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.91);
 }
 
 .cocktail-info {
   margin-left: $spacer *2;
+}
+
+.cocktail-hover {
+  &:hover {
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  }
 }

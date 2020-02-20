@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="cocktail-container">
+  <div class="cocktail-container cocktail-hover">
     <div class="cocktail-image"></div>
     <div class="cocktail-info">
       <h2><%= @cocktail.name %></h2>
@@ -12,10 +12,16 @@
           <% end %>
         </div>
         <% end %>
-          <%= link_to new_cocktail_dose_path(@cocktail), class: "cocktail-add-dose btn btn-primary" do %>
-            <i class="fas fa-plus-circle"></i>
-            <p>Add ingredient</p>
-          <% end %>
+            <i class="fas fa-plus-circle cocktail-add-dose cocktail-hover btn btn-primary dropdown-toggle"  id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><p>Add ingredient</p></i>
+          <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+            <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <li role="cocktail-dropdown-item" id="dropdown">
+              <%= f.input :description %>
+              <%= f.association :ingredient, include_blank: false, class: "select2" %>
+              <%= f.submit "Add Ingredient", class: "btn btn-primary cocktail-hover" %>
+          </li>
+            <% end %>
+          </ul>
       </ul>
     </div>
   </div>
