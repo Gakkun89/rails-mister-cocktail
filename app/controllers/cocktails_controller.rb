@@ -9,6 +9,7 @@ class CocktailsController < ApplicationController
   def show
     @dose = Dose.new
     @ingredients = Ingredient.where.not(id: @cocktail.ingredients)
+    @path = ""
   end
 
   def new
@@ -45,6 +46,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end

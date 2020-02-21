@@ -17,6 +17,7 @@
             <h2>New Cocktail</h2>
             <%= simple_form_for @cocktail do |f| %>
               <%= f.input :name, label:false %>
+              <%= f.input :photo, as: :file, label: false %>
               <%= f.submit "Add Cocktail", class: "btn btn-primary cocktail-hover nav-btn" %>
             <% end %>
            </li>
