@@ -2,7 +2,11 @@
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
     <div class="card-back">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <% if cocktail.photo.attached?%>
+      <% @path = cocktail.photo.key%>
+    <% else @path = "xnjajecpvayfaocoyrqh"  %>
+    <% end %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @path, height: 300, width: 400 %>')">
         <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
         <%= cocktail.name %>
       </div>
