@@ -1,11 +1,12 @@
 <div class="container">
   <div class="cocktail-container cocktail-hover">
-    <% if @cocktail.photo %>
-      <% @path = "xnjajecpvayfaocoyrqh"%>
-    <% else @path = @cocktail.photo.key  %>
+    <% if @cocktail.photo.attached?%>
+      <% @path = @cocktail.photo.key%>
+    <% else @path = "xnjajecpvayfaocoyrqh"  %>
     <% end %>
-
-    <div class="cocktail-image" style="background-image: url('<%= cl_image_path @path, height: 300, width: 400 %>')"></div>
+    <div class="cocktail-img-card">
+      <div class="cocktail-image" style="background-image: url('<%= cl_image_path @path, height: 300, width: 400 %>')"></div>
+    </div>
     <div class="cocktail-info">
       <h2><%= @cocktail.name %></h2>
       <ul class="cocktail-ingredients">

@@ -65,19 +65,21 @@
   margin-top: $spacer * 5;
   width: 450px;
   display: flex;
-  border: 1px solid rgba(55,55,55, 0.3);
+  border: 1px solid rgba(55,55,55, 0.4);
   transition: 0.5s;
 }
 
-
+.cocktail-img-card {
+  background-color: rgb(245,245,245);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: $spacer / 2;
+  margin-right: $spacer;
+}
 
 .cocktail-image {
   background-size: cover;
   height: 150px;
   width: 150px;
-  border-radius: $spacer;
-  margin-right: $spacer;
-  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.91);
 }
 
 .cocktail-info {
