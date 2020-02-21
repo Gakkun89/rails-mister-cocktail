@@ -8,6 +8,7 @@ class CocktailsController < ApplicationController
 
   def show
     @dose = Dose.new
+    @ingredients = Ingredient.where.not(id: @cocktail.ingredients)
   end
 
   def new
