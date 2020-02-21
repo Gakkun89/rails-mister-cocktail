@@ -4,8 +4,10 @@
       <% @path = @cocktail.photo.key%>
     <% else @path = "xnjajecpvayfaocoyrqh"  %>
     <% end %>
-    <div class="cocktail-img-card">
-      <div class="cocktail-image" style="background-image: url('<%= cl_image_path @path, height: 300, width: 400 %>')"></div>
+    <div class="img-wrapper">
+      <div class="cocktail-img-card">
+        <div class="cocktail-image" style="background-image: url('<%= cl_image_path @path, height: 300, width: 400 %>')"></div>
+      </div>
     </div>
     <div class="cocktail-info">
       <h2><%= @cocktail.name %></h2>
