@@ -16,7 +16,7 @@
           <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
             <%= simple_form_for [@cocktail, @dose] do |f| %>
           <li role="cocktail-dropdown-item" id="dropdown">
-              <%= f.association :ingredient, include_blank: false, label: false, class: "select2 selector" %>
+              <%= f.association :ingredient, collection: @ingredients, include_blank: false, label: false, class: "select2 selector" %>
               <%= f.input :description, placeholder: "Measure", label: false %>
               <%= f.submit "Add Ingredient", class: "btn btn-primary cocktail-hover cocktail-btn" %>
           </li>

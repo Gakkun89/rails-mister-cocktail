@@ -9,6 +9,7 @@ class DosesController < ApplicationController
     @dose = Dose.new(dose_params)
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose.cocktail = @cocktail
+    @ingredients = Ingredient.where.not(id: @cocktail.ingredients)
 
     if @dose.save
       redirect_to cocktail_path(@cocktail)
