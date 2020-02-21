@@ -48,7 +48,7 @@
   align-items: center;
   margin-top: $spacer;
   // padding-right: 0;
-  width: 170px;
+  // width: 170px;
   transition: 0.5s;
   p {
     margin: 0;
@@ -92,5 +92,10 @@
 }
 
 #dose_ingredient_id {
-margin-left: $spacer *2;
+  margin-left: $spacer *2;
+  width: 170px;
+}
+
+.cocktail-btn {
+  margin-top: $spacer / 2;
 }
